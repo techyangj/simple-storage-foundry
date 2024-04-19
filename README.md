@@ -64,3 +64,25 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+
+
+### some orders
+forge init <name>
+forge compile
+forge create <.sol> --interactive
+forge create <.sol> --rpc-url http://127.0.0.1:8545 --interactive
+
+forge script DeploySimpleStorage --rpc-url http://127.0.0.1:8545 --broadcast
+forge script DeploySimpleStorage --rpc-url http://127.0.0.1:8545 --broadcast --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+
+forge script DeploySimpleStorage --rpc-url $RPC_URL --broadcast --private-key $PRIVATE_KEY
+
+
+cast send 0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9 "store(uint256)" 123 --rpc-url $RPC_URL --private-key $PRIVATE_KEY
+cast call 0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9 "retrieve()"
+cast --to-base 0x000000000000000000000000000000000000000000000000000000000000007b dec
+
+anvil
+
+.env is a example for use
